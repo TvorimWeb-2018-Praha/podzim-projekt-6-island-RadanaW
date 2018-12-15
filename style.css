@@ -7,6 +7,9 @@
  Jedeme retro cernobile, dnes barvy nepotrebujeme.
 */
 
+.html {
+    background-color: grey;
+}
 
 body {
     margin: 0;
@@ -15,29 +18,360 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+
 }
 
 
 /* HLAVICKA */
 
+.hlavicka {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( rgba(0, 0, 0, 0.3),
+                                 rgba(0, 0, 0, 0.3)),
+                                url(images/island-hlavicka.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+
 .titulek {
     font-family: 'Raleway', serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin: 7px 0 25px 0;
+}
+
+.autor {
+    font-size: 14px;
+    opacity: 0.7;
+    padding: 0 0 30px 0;
+    position: relative;
+}
+
+.perex {
+    padding: 10px;
+    margin: -35px 0 0 0;
+    font-size: 14px;
+
+}
+
+.perex::after {
+    display: block;
+    content: '';
+   width: 90px;
+   height: 2px;
+   background: white;
+   opacity: 0.8;
+   margin: auto;
+
+}
+
+
+.responsive {
+    width: 100%;
+    height: auto;
+    margin: 35px 0 -10px 0;
 }
 
 
 /* MENU */
 
+.menu {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: rgb(155, 153, 153);
+    font-family: 'Raleway', serif;
+    font-size: 12px;
+}
+
+.menu li {
+    text-align: center;
+}
 
 
 
 /* OBSAH */
 
+.text {
+    margin: 25px 25px 0px 25px;
+    font-size: 14px;
+}
 
+.popis {
+    font-size: 10px;
+    color: rgb(155, 153, 153);
+    text-align: center;
+}
+.popis a {
+    color: rgb(155, 153, 153);
+}
+
+.kapitola {
+    font-family: 'Raleway', serif;
+    margin: 25px 0 0 20px;
+position: relative;
+
+}
+
+.kapitola::after {
+ 
+    display: block;
+    content: '';
+   width: 70px;
+   height: 4px;
+   background: rgb(98, 159, 238);
+   position: absolute;
+   margin-top: 20px;
+   margin-bottom: 70px;
+   margin-left: -20px;
+}
 
 
 /* FOTOGALERIE */
 
-
+.galerie {
+    margin: 60px 0 0 0;
+}
 
 
 /* PATICKA */
+
+.paticka {
+    font-size: 10px;
+    color: rgb(155, 153, 153);
+}
+
+.paticka a {
+    color: rgb(155, 153, 153);
+}
+
+@media (max-width: 500px) {
+   
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+.menu li {
+    text-align: center;
+    border-bottom: rgba(212, 208, 208, 0.233) 1px solid;
+}
+
+.popisek {
+    font-size: 10px;
+    color: rgb(155, 153, 153);
+    text-align: center;
+}
+.popisek a {
+    color: rgb(155, 153, 153);
+}
+}
+
+
+@media (min-width: 500px) {
+    .menu {
+    display: flex;
+       flex-direction: row;
+       justify-content: center;
+       margin: auto;
+    
+    }
+
+    .menu li {
+        padding: 0 25px 0 25px;
+        border-top: rgba(212, 208, 208, 0.233) 1px solid;
+        border-right: rgba(212, 208, 208, 0.233) 1px solid;
+        border-bottom: rgba(212, 208, 208, 0.233) 1px solid;
+        margin-top: 10px;
+    }
+
+
+    .perex::after {
+        display: block;
+        content: '';
+       width: 90px;
+       height: 2px;
+       background: white;
+       opacity: 0.8;
+       margin: auto;
+    
+    }
+
+    .responsive {
+        position: relative;
+    }
+
+    .popis {
+        position: absolute;
+        margin-top: -10px;
+        margin-left: 700px;
+    }
+    
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+    .fotos {
+	width: 400 px;
+    height: 225px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+    .fotos img {
+    display: block;
+    margin: 0;
+
+}
+
+.fotos:hover .popisek {
+    position: absolute;
+    bottom: 0;
+ 
+}
+
+    .popisek {
+	background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: "Releway";
+    font-size: 16px;
+    font-weight: bold;
+	text-align: center;
+    margin: 0;
+	width: 100%;
+
+}
+
+    .popisek a {
+	color: white;
+}
+
+}
+
+@media (min-width: 1000px) {
+    .hlavicka {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient( rgba(0, 0, 0, 0.3),
+                                     rgba(0, 0, 0, 0.3)),
+                                    url(images/island-hlavicka.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        color: white;
+        text-align: center;
+    }
+
+    .perex {
+        display:block;
+        width: 900px;
+        margin: auto;
+    }
+    .perex::after {
+        display: block;
+        content: '';
+       width: 90px;
+       height: 2px;
+       background: white;
+       opacity: 0.8;
+       margin: auto;
+    
+    }
+    .obal {
+        width: 960px; 
+        background: white;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        margin-top: -35px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 250px;
+        float:left;
+        padding-top: 20px;
+        padding-left: -20px;
+    }
+
+    .uvod {
+        padding-left: 220px;
+        padding-top: 20px;
+    }
+    .co {
+        padding-left: 220px;
+    }
+    .menu li {
+        border-bottom: rgba(212, 208, 208, 0.233) 1px solid;
+        border-top: none;
+        border-right: none;
+    }
+
+    .proc {
+        padding-right: 220px;
+    }
+    .zmena {
+        padding-right: 220px;
+    }
+
+    .galerie {
+        width: 960px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+      .galerie>* {
+          flex: 0 0 33.3333%;
+      }
+
+      .fotos {
+        width: 319px;
+        height: 179px;
+        overflow: hidden;
+        position: relative;
+    
+    }
+    
+    .fotos img {
+        display: block;
+        margin: 0;
+    
+    }
+    
+    .fotos:hover .popisek {
+        position: absolute;
+        bottom: 0;
+     
+    }
+    
+        .popisek {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        font-family: 'Raleway', serif;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    
+    }
+    
+        .popisek a {
+        color: white;
+    }
+  
+}

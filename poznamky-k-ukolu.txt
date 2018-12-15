@@ -1,4 +1,4 @@
-﻿Responzivní breakpointy (místa, kde se mění rozložení stránky):
+Responzivní breakpointy (místa, kde se mění rozložení stránky):
 
 Mobilní verze - šířka do 500px
 ==============================
@@ -30,3 +30,6 @@ Počitačová verze - šířka nad 1000px
 
 
 Pokud nevíš jak, neřeš zatím ty modré čárky pod nadpisy. Lze to udělat např. pomocí pseudoprvku ::after u nadpisu. Zběžně jsme si to ukazovali, ale pokud nevíš jak, tak se tím netrap.
+
+
+
